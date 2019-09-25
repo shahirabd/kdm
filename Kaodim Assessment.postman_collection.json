@@ -1,0 +1,223 @@
+{
+	"info": {
+		"_postman_id": "220c5349-5125-4d02-a790-c6098654e12d",
+		"name": "Kaodim Assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Overview",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "71fd891d-cbb1-4ee1-af79-defc10e85fcd",
+						"exec": [
+							"pm.test(\"Check 200 status is returned\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{host}}/overview",
+					"protocol": "https",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"overview"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Categories",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "84f4c0ff-b64c-437e-80ef-e1d030f0a18c",
+						"exec": [
+							"pm.test(\"Check 200 status is returned\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{host}}/users/help_center/categories",
+					"protocol": "https",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"users",
+						"help_center",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Categories Sections",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "09d0ecae-4a37-420c-b52e-865a15201a0c",
+						"exec": [
+							"pm.test(\"Check 404 status is returned\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{host}}/users/help_center/categories/35/sections",
+					"protocol": "https",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"users",
+						"help_center",
+						"categories",
+						"35",
+						"sections"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Categories Sections POST",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8347e879-5faa-41d2-9cf7-95a0a99284cc",
+						"exec": [
+							"pm.test(\"Check 400 status is returned\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://{{host}}/users/help_center/categories/35/sections",
+					"protocol": "https",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"users",
+						"help_center",
+						"categories",
+						"35",
+						"sections"
+					]
+				},
+				"description": "Test non existent end point, and check if the correct response is returned"
+			},
+			"response": []
+		},
+		{
+			"name": "Articles",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a3bc8203-70f2-4d25-8113-27005a080b26",
+						"exec": [
+							"pm.test(\"Check 200 status is returned\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{host}}/users/help_center/sections/108/articles",
+					"protocol": "https",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"users",
+						"help_center",
+						"sections",
+						"108",
+						"articles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Articles PUT",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f45fb5e9-c047-49aa-abc8-bde276177e04",
+						"exec": [
+							"pm.test(\"Check 400 status is returned\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://{{host}}/users/help_center/sections/108/articles",
+					"protocol": "https",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"users",
+						"help_center",
+						"sections",
+						"108",
+						"articles"
+					]
+				},
+				"description": "Test non existent endpoint"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
