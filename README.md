@@ -1,7 +1,7 @@
 # kdm
 Kaodim Assessment - Postman test
 
-Instructio
+<b>Instructions</b>
 
 Run locally using Postman
 1. Download the collection and the environment file to your local drive. Save them in the same folder.
